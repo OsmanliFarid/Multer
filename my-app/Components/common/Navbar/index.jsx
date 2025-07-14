@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-gray-400 flex items-center px-10 gap-x-3 h-20">
-        <Link href={"/users"}>Users</Link>
+        <Link href={"/"}>Users</Link>
         <Link href={"/add-user"}>AddUser</Link>
       </div>
     </>

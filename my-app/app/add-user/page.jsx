@@ -12,6 +12,7 @@ const AddUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
+    formData.append("id", Date.now());
     formData.append("firstName", firstName);
     formData.append("lastName", lastName);
     formData.append("age", age);
@@ -22,6 +23,11 @@ const AddUser = () => {
     axios.post("http://localhost:8080/upload", formData).then(({ data }) => {
       console.log(data);
     });
+    setFirstName("");
+    setLastName("");
+    setAge("");
+    setPhoneNumber("");
+    setAvatar(null);
   };
 
   return (
